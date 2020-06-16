@@ -1,0 +1,31 @@
+LIB=\
+	lib9\
+	libc\
+	libbsd\
+	libl\
+	libnet\
+	libregexp\
+	libv\
+	libdraw\
+	libfmt\
+	libutf\
+
+none:VQ:
+	echo mk all, install, installall, clean, or nuke
+
+all clean nuke install installall:V:
+	for(i in $LIB) @{
+		cd $i
+		mk $target
+	}
+
+SRC=\
+	README\
+	mkconfig\
+	mkfile\
+	mksyslib\
+	$LIB\
+
+dist:V:
+	rm -f ape.tgz
+	tar c $SRC | gzip >ape.tgz

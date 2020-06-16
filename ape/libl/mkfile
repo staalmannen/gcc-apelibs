@@ -1,0 +1,12 @@
+<../mkconfig
+
+LIB=/usr/pkg/lib/libl.a
+OFILES=allprint.$O\
+	main.$O\
+	reject.$O\
+	yyless.$O\
+	yywrap.$O\
+
+<../mksyslib
+
+CFLAGS=$CFLAGS -D_RESEARCH_SOURCE -c

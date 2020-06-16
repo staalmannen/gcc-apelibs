@@ -1,0 +1,5 @@
+TEXT _READ(SB), 1, $0
+MOVW R0, 0(FP)
+MOVW $15, R0
+SWI 0
+RET

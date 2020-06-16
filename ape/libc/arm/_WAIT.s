@@ -1,0 +1,5 @@
+TEXT _WAIT(SB), 1, $0
+MOVW R0, 0(FP)
+MOVW $36, R0
+SWI 0
+RET

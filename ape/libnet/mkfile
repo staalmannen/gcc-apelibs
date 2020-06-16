@@ -1,0 +1,9 @@
+<../mkconfig
+
+LIB=/usr/pkg/lib/libnet.a
+OFILES=dial.$O\
+	announce.$O\
+
+<../mksyslib
+
+CFLAGS=$CFLAGS -D_RESEARCH_SOURCE -D_NET_EXTENSION -c

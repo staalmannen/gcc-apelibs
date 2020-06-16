@@ -1,0 +1,53 @@
+<../mkconfig
+
+LIB=/usr/pkg/lib/libbsd.a
+OFILES=\
+	accept.$O\
+	bcopy.$O\
+	bind.$O\
+	connect.$O\
+	endhostent.$O\
+	ffs.$O\
+	getdtablesize.$O\
+	gethostbyname.$O\
+	gethostbyaddr.$O\
+	gethostname.$O\
+	getopt.$O\
+	getpeername.$O\
+	getprotobyname.$O\
+	getservbyname.$O\
+	getsockname.$O\
+	gettimeofday.$O\
+	inet_addr.$O\
+	inet_ntoa.$O\
+	ioctl.$O\
+	listen.$O\
+	lstat.$O\
+	mktemp.$O\
+	ntohl.$O\
+	nptohl.$O\
+	popen.$O\
+	putenv.$O\
+	rcmd.$O\
+	readv.$O\
+	rresvport.$O\
+	send.$O\
+	sendto.$O\
+	setlinebuf.$O\
+	sethostent.$O\
+	shutdown.$O\
+	_sock_ingetaddr.$O\
+	_sock_ipattr.$O\
+	_sock_srv.$O\
+	strcasecmp.$O\
+	strncasecmp.$O\
+	socket.$O\
+	socketpair.$O\
+	pty.$O\
+	writev.$O\
+	
+HFILES=priv.h
+
+<../mksyslib
+
+CFLAGS=$CFLAGS -DHAVE_SOCK_OPTS -D_PLAN9_SOURCE -I../libc/plan9 -c

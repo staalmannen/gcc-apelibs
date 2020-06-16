@@ -1,0 +1,18 @@
+<../../mkconfig
+CRT0=/usr/pkg/lib/crt0.$O
+LIB=/usr/pkg/lib/libc.a
+OFILES=\
+	lock.$O\
+	notetramp.$O\
+	setjmp.$O\
+	tas.$O\
+
+<../../mksyslib
+
+CFLAGS=$CFLAGS -c -D_PLAN9_SOURCE
+
+all:V:	$CRT0
+install:V:	$CRT0
+
+$CRT0: crt0.$O
+	cp $prereq $target

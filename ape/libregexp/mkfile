@@ -1,0 +1,14 @@
+<../mkconfig
+
+LIB=/usr/pkg/lib/libregexp.a
+OFILES=regcomp.$O\
+	regerror.$O\
+	regexec.$O\
+	regsub.$O\
+	regaux.$O\
+	rregexec.$O\
+	rregsub.$O\
+
+<../mksyslib
+
+CFLAGS=$CFLAGS -DUTF -D_REGEXP_EXTENSION -c

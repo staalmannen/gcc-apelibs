@@ -1,0 +1,15 @@
+<../../mkconfig
+LIB=/usr/pkg/lib/libc.a
+OFILES=\
+	getgrent.$O\
+	getpwent.$O\
+	locale.$O\
+	mkfifo.$O\
+	pathconf.$O\
+	sigset.$O\
+	sysconf.$O\
+	tzset.$O\
+
+<../../mksyslib
+
+CFLAGS=$CFLAGS -c

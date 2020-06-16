@@ -1,0 +1,23 @@
+# global include file for the APE environment
+
+objtype=386
+
+# < /$objtype/mkfile		# gives (compiler loader extension ranliber)
+O=o
+OS=o
+
+APEBIN=/$objtype/bin/ape	# where installed ape binaries go
+APELIB=/rc/bin/ape		# where helper programs go
+AS=gnu/as
+CC=gnu/gcc				# compiler (must be ansi)
+LD=gnu/gcc				# loader
+CFLAGS=-fplan9-extensions -B/386/bin/gnu/libexec/gcc/i386-lucent-plan9/4.8.2 -B//$objtype/bin/gnu # global defaults
+FAMILY=plan9
+#AR=i386-lucent-plan9-ar				# manipulating libraries
+AR=gnu/ar				# manipulating libraries
+RANLIB=echo			# for updating libraries
+
+INSTALL=$APELIB/install		# install script
+INSOWNER=()			# default installation parameter
+INSGROUP=bin			# default installation parameter
+INSMODE=775			# default installation parameter
